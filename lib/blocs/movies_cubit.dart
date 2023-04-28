@@ -14,7 +14,6 @@ class MoviesCubit extends Cubit<MoviesState> {
     tmdbRepository.fetchPopularMovies()
     .then((movies) => emit(MoviesState.loaded(movies)))
     .onError((error, stackTrace) {
-      print(error);
       emit(MoviesState.error());
     });
   }

@@ -12,7 +12,7 @@ class Movie {
       id: json['id'],
       title: json['title'],
       posterPath: json['poster_path'],
-      rating: json['vote_average'] ?? 0
+      rating: json['vote_average'] + .0 ?? 0
     );
   }
 }
